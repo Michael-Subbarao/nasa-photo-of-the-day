@@ -6,6 +6,7 @@ const StyledPhotoContainer = styled.div`
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    background-color: #f6fafb;
 `
 
 const StyledImg = styled.img`
@@ -15,10 +16,14 @@ const StyledImg = styled.img`
     width: 30%;
 `
 
+const StyledTitle = styled.h1`
+    color: #5e6668;
+`
+
 const Photo = (props) =>{
     return(
         <StyledPhotoContainer className = "photoContainer">
-            <h1>{props.photo.title}</h1>
+            <StyledTitle>{props.photo.title}</StyledTitle>
             <p>{props.photo.date}</p>         
             <StyledImg src ={props.photo.hdurl} alt={props.photo.title}/>
             <p>{props.photo.explanation}</p>
